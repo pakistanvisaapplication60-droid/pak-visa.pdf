@@ -6,13 +6,13 @@
 
 <style>
 @page{
-  size: A4;
-  margin: 15mm;
+  size:A4;
+  margin:15mm;
 }
 
 body{
   margin:0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
   background:#fff;
   color:#222;
 }
@@ -39,12 +39,8 @@ body{
 }
 
 .header-left img{
-  height:70px;              /* لوگوی بالا مثل اصل */
-  display:block;            /* FIX: گم نشدن در PDF */
-}
-
-.header-title{
-  line-height:1.15;
+  height:70px;
+  display:block; /* مهم برای PDF */
 }
 
 .header-title .pak{
@@ -74,7 +70,6 @@ body{
   width:95px;
   height:120px;
   border:1px solid #ccc;
-  object-fit:cover;
   display:block;
 }
 
@@ -96,8 +91,20 @@ body{
 }
 
 .section h3{
-  margin:0 0 8px;
+  margin:0 0 10px;
   font-size:13px;
+  font-weight:bold;
+}
+
+/* ===== APPLICATION DETAILS (مثل اصل با فاصله زیاد) ===== */
+.app-row{
+  display:grid;
+  grid-template-columns: 260px auto; /* فاصله زیاد مثل اصل */
+  font-size:12.5px;
+  margin-bottom:14px;
+}
+
+.app-row b{
   font-weight:bold;
 }
 
@@ -117,16 +124,6 @@ td.label{
   width:38%;
   font-weight:bold;
   background:#fafafa;
-}
-
-/* ===== APPLICATION DETAILS (بدون خانه) ===== */
-.plain{
-  font-size:12.5px;
-  line-height:1.8;
-}
-
-.app-space{
-  margin-bottom:18px;   /* فاصله زیاد مثل اصل */
 }
 
 /* ===== CONDITIONS ===== */
@@ -155,7 +152,7 @@ td.label{
 
 .footer img{
   height:40px;
-  display:block;     /* FIX PDF */
+  display:block; /* لوگو در PDF */
 }
 
 .footer-date{
@@ -171,7 +168,7 @@ td.label{
 <!-- HEADER -->
 <div class="header">
   <div class="header-left">
-    <img src="logo-color.jpg">
+    <img src="logo.jpg">
     <div class="header-title">
       <div class="pak">Pak Visa</div>
       <div class="sub">Islamic Republic of Pakistan<br>Ministry of Interior</div>
@@ -196,13 +193,15 @@ td.label{
 <!-- APPLICATION DETAILS -->
 <div class="section">
 <h3>Application Details</h3>
-<div class="plain">
-  <div class="app-space">
-    <b>Date of Visa Application:</b> 2024-12-02
-  </div>
-  <div>
-    <b>Visa Reference Number:</b> 88004554637
-  </div>
+
+<div class="app-row">
+  <b>Date of Visa Application:</b>
+  <div>2024-12-02</div>
+</div>
+
+<div class="app-row">
+  <b>Visa Reference Number:</b>
+  <div>88004554637</div>
 </div>
 </div>
 
@@ -254,7 +253,7 @@ V&lt;PAKHUSSIEN&lt;KHIL&lt;NEMATULLAH&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt
 
 <!-- FOOTER -->
 <div class="footer">
-<img src="logo-black.jpg">
+<img src="logo.jpg">
 <div class="footer-date">13 Mar 2025</div>
 </div>
 
