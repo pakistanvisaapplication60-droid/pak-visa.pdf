@@ -28,18 +28,18 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  border-bottom:3px solid #1f4fa3;
-  padding-bottom:6px;
+  border-bottom:4px solid #1f4fa3;
+  padding-bottom:8px;
 }
 
 .header-left{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:14px;
 }
 
 .header-left img{
-  height:48px;
+  height:62px; /* لوگوی بالا بزرگ‌تر */
 }
 
 .header-title{
@@ -47,18 +47,18 @@ body{
 }
 
 .header-title .pak{
-  font-size:24px;
+  font-size:28px;
   font-weight:bold;
   color:#1a7f3c;
 }
 
 .header-title .sub{
-  font-size:11px;
+  font-size:12px;
   text-transform:uppercase;
 }
 
 .header-right{
-  font-size:15px;
+  font-size:16px;
   font-weight:bold;
 }
 
@@ -66,41 +66,40 @@ body{
 .top{
   display:flex;
   justify-content:space-between;
-  margin-top:10px;
+  margin-top:12px;
 }
 
 .photo img{
-  width:90px;
-  height:110px;
+  width:95px;
+  height:115px;
   border:1px solid #ccc;
   object-fit:cover;
 }
 
 .qr img{
-  width:90px;
-  height:90px;
+  width:95px;
+  height:95px;
   border:1px solid #ccc;
 }
 
 .name{
-  margin-top:4px;
+  margin-top:6px;
   font-size:13px;
   font-weight:bold;
 }
 
-/* ===== SECTIONS (بدون باکس) ===== */
+/* ===== SECTIONS ===== */
 .section{
-  margin-top:12px;
+  margin-top:14px;
 }
 
 .section h3{
-  margin:0 0 4px;
-  padding:0;
+  margin:0 0 6px;
   font-size:13px;
   font-weight:bold;
 }
 
-/* ===== TABLE ===== */
+/* ===== TABLE (بدون خانه) ===== */
 table{
   width:100%;
   border-collapse:collapse;
@@ -108,9 +107,8 @@ table{
 }
 
 td{
-  border:1px solid #ddd;
-  padding:6px;
-  background:#fff;
+  padding:4px 2px;
+  border:none;          /* ❌ بدون خانه */
 }
 
 td.label{
@@ -118,8 +116,10 @@ td.label{
   font-weight:bold;
 }
 
-/* ===== CONDITIONS ===== */
+/* ===== CONDITIONS (دارای رنگ) ===== */
 .conditions{
+  background:#f3f3f3;   /* مطابق اصل */
+  padding:10px;
   font-size:11.5px;
 }
 
@@ -129,7 +129,7 @@ td.label{
 
 /* ===== MRZ ===== */
 .mrz{
-  margin-top:10px;
+  margin-top:12px;
   font-family:"Courier New", monospace;
   font-size:11px;
   letter-spacing:1px;
@@ -137,16 +137,17 @@ td.label{
 
 /* ===== FOOTER ===== */
 .footer{
-  margin-top:10px;
+  margin-top:12px;
 }
 
 .footer img{
   height:38px;
+  filter:grayscale(100%); /* لوگوی پایین سیاه */
 }
 
 .footer-date{
   font-size:11px;
-  margin-top:3px;
+  margin-top:4px;
 }
 </style>
 </head>
