@@ -39,7 +39,7 @@ body{
 }
 
 .header-left img{
-  height:62px; /* لوگوی بالا بزرگ‌تر */
+  height:68px; /* لوگوی بالا کلان */
 }
 
 .header-title{
@@ -98,7 +98,7 @@ body{
   font-weight:bold;
 }
 
-/* ===== TABLE (برای Applicant و Visa Grant) ===== */
+/* ===== TABLE ===== */
 table{
   width:100%;
   border-collapse:collapse;
@@ -116,10 +116,14 @@ td.label{
   background:#fafafa;
 }
 
-/* ===== APPLICATION DETAILS (بدون خانه مثل اصل) ===== */
+/* ===== APPLICATION DETAILS ===== */
 .plain{
   font-size:12.5px;
   line-height:1.7;
+}
+
+.app-gap{
+  margin-bottom:14px; /* فاصله زیاد مثل اصل */
 }
 
 /* ===== CONDITIONS ===== */
@@ -147,8 +151,7 @@ td.label{
 }
 
 .footer img{
-  height:40px;
-  filter:grayscale(100%);
+  height:40px; /* لوگوی پایین */
 }
 
 .footer-date{
@@ -164,7 +167,7 @@ td.label{
 <!-- HEADER -->
 <div class="header">
   <div class="header-left">
-    <img src="logo.jpg">
+    <img src="logo-color.jpg">
     <div class="header-title">
       <div class="pak">Pak Visa</div>
       <div class="sub">Islamic Republic of Pakistan<br>Ministry of Interior</div>
@@ -186,16 +189,20 @@ td.label{
   </div>
 </div>
 
-<!-- APPLICATION DETAILS (بدون خانه) -->
+<!-- APPLICATION DETAILS -->
 <div class="section">
 <h3>Application Details</h3>
 <div class="plain">
-<b>Date of Visa Application:</b> 2024-12-02<br>
-<b>Visa Reference Number:</b> 88004554637
+  <div class="app-gap">
+    <b>Date of Visa Application:</b> 2024-12-02
+  </div>
+  <div>
+    <b>Visa Reference Number:</b> 88004554637
+  </div>
 </div>
 </div>
 
-<!-- APPLICANT DETAILS (با خانه) -->
+<!-- APPLICANT DETAILS -->
 <div class="section">
 <h3>Applicant's Details</h3>
 <table>
@@ -206,7 +213,7 @@ td.label{
 </table>
 </div>
 
-<!-- VISA GRANT DETAILS (با خانه) -->
+<!-- VISA GRANT DETAILS -->
 <div class="section">
 <h3>Visa Grant Details</h3>
 <table>
@@ -243,7 +250,7 @@ V&lt;PAKHUSSIEN&lt;KHIL&lt;NEMATULLAH&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt
 
 <!-- FOOTER -->
 <div class="footer">
-<img src="logo.jpg"><br>
+<img src="logo-black.jpg"><br>
 <div class="footer-date">13 Mar 2025</div>
 </div>
 
