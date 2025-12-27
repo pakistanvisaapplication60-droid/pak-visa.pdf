@@ -2,146 +2,163 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Visa Application – Pakistan Online Visa</title>
+<title>Visa Grant Notice – Pak Visa</title>
 
 <style>
 *{
-  margin:0;
-  padding:0;
   box-sizing:border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-  background:#ffffff;
-  color:#000;
+@page{
+  size: A4;
+  margin: 12mm;
 }
 
-/* ===== PAGE ===== */
+body{
+  background:#e5e5e5;
+  margin:0;
+  padding:10px;
+}
+
 .page{
   width:210mm;
-  min-height:297mm;
+  height:297mm;
+  background:#fff;
   margin:auto;
-  padding:20mm;
+  padding:18mm 16mm;
 }
 
 /* ===== HEADER ===== */
 .header{
   display:flex;
   justify-content:space-between;
-  align-items:flex-end;
-  border-bottom:3px solid #1f4fa3;
-  padding-bottom:8px;
+  align-items:flex-start;
 }
 
 .header-left{
   display:flex;
-  align-items:center;
   gap:10px;
+  align-items:center;
 }
 
 .header-left img{
-  height:45px;
+  height:52px;
 }
 
 .header-text h1{
+  margin:0;
   font-size:26px;
-  color:#0b6b3a;
+  color:#1f7a3a;
+  font-weight:bold;
 }
 
 .header-text p{
+  margin:2px 0 0;
   font-size:12px;
+  color:#333;
+  line-height:1.2;
 }
 
 .header-right{
-  font-size:16px;
+  font-size:15px;
   font-weight:bold;
+  margin-top:6px;
+}
+
+.line{
+  height:3px;
+  background:#1f4fa3;
+  margin:10px 0 14px;
 }
 
 /* ===== PHOTO + QR ===== */
-.top-section{
+.top-box{
   display:flex;
   justify-content:space-between;
-  margin-top:18px;
+  align-items:flex-start;
+}
+
+.photo-box{
+  width:120px;
 }
 
 .photo-box img{
-  width:110px;
-  height:140px;
-  object-fit:cover;
-  border:1px solid #ccc;
+  width:120px;
+  height:150px;
+  border:1px solid #bbb;
 }
 
-.name{
-  margin-top:6px;
+.photo-name{
+  margin-top:4px;
   font-weight:bold;
+  font-size:12.5px;
 }
 
 .qr-box img{
-  width:110px;
-  height:110px;
-  border:1px solid #ccc;
+  width:105px;
+  height:105px;
+  border:1px solid #bbb;
 }
 
-/* ===== TABLES ===== */
+/* ===== SECTION TITLES ===== */
 .section-title{
-  background:#f1f1f1;
-  padding:6px;
+  margin-top:12px;
+  background:#f2f2f2;
+  padding:5px 7px;
   font-weight:bold;
-  margin-top:15px;
-  border:1px solid #ddd;
-}
-
-table{
-  width:100%;
-  border-collapse:collapse;
   font-size:13px;
 }
 
+/* ===== TABLE ===== */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:12.5px;
+}
+
 td{
-  border:1px solid #ddd;
-  padding:6px;
+  border:1px solid #d6d6d6;
+  padding:5px 7px;
 }
 
 td:first-child{
-  width:35%;
+  width:36%;
   background:#fafafa;
   font-weight:bold;
 }
 
 /* ===== CONDITIONS ===== */
 .conditions{
-  border:1px solid #ddd;
-  padding:10px;
-  font-size:12px;
+  font-size:11.8px;
+  margin-top:6px;
+  line-height:1.35;
 }
 
 .conditions ul{
-  margin-left:18px;
+  margin:4px 0 0 18px;
 }
 
 /* ===== MRZ ===== */
 .mrz{
-  margin-top:12px;
-  font-family: "Courier New", monospace;
-  font-size:12px;
-  letter-spacing:2px;
+  margin-top:10px;
+  font-family:"Courier New", monospace;
+  font-size:11.5px;
+  letter-spacing:0.5px;
 }
 
 /* ===== FOOTER ===== */
 .footer{
-  margin-top:10px;
-  padding-top:6px;
-  border-top:2px solid #1f4fa3;
+  margin-top:8px;
 }
 
 .footer img{
-  height:35px;
+  height:36px;
 }
 
 .footer-date{
-  font-size:11px;
-  margin-top:4px;
+  font-size:11.5px;
+  margin-top:3px;
 }
 </style>
 </head>
@@ -152,7 +169,7 @@ td:first-child{
   <!-- HEADER -->
   <div class="header">
     <div class="header-left">
-      <img src="logo.png">
+      <img src="logo.jpg" alt="Pak Visa Logo">
       <div class="header-text">
         <h1>Pak Visa</h1>
         <p>ISLAMIC REPUBLIC OF PAKISTAN<br>MINISTRY OF INTERIOR</p>
@@ -161,17 +178,17 @@ td:first-child{
     <div class="header-right">VISA GRANT NOTICE</div>
   </div>
 
+  <div class="line"></div>
+
   <!-- PHOTO + QR -->
-  <div class="top-section">
-    <div>
-      <div class="photo-box">
-        <img src="photo.jpg">
-      </div>
-      <div class="name">Hussien Khil Nematullah</div>
+  <div class="top-box">
+    <div class="photo-box">
+      <img src="photo.jpg" alt="Applicant Photo">
+      <div class="photo-name">Hussien Khil Nematullah</div>
     </div>
 
     <div class="qr-box">
-      <img src="qr.png">
+      <img src="Qr.jpg" alt="QR Code">
     </div>
   </div>
 
@@ -209,6 +226,8 @@ td:first-child{
   <div class="section-title">Visa Conditions and Entitlements</div>
   <div class="conditions">
     Entry may be made on any date between visa start date & visa end date.
+    This visa is granted based upon information and documents provided by the applicant,
+    hence, any incorrect or misleading information/documents may lead to:
     <ul>
       <li>Visa Cancellation</li>
       <li>Detention</li>
@@ -218,13 +237,13 @@ td:first-child{
 
   <!-- MRZ -->
   <div class="mrz">
-    V&lt;PAKHUSSIEN&lt;KHIL&lt;NEMATULLAH&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
+    V&lt;PAKHUSSIEN&lt;KHIL&lt;NEMATULLAH&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
     88004554637&lt;2AFG0006219M2509127P05653262&lt;&lt;&lt;&lt;
   </div>
 
   <!-- FOOTER -->
   <div class="footer">
-    <img src="logo.png">
+    <img src="logo.jpg" alt="Pak Visa">
     <div class="footer-date">13 Mar 2025</div>
   </div>
 
