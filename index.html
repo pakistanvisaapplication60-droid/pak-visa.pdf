@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Pak Visa – Visa Grant Notice</title>
+<title>Visa Grant Notice</title>
 
 <style>
 @page{
@@ -39,8 +39,7 @@ body{
 }
 
 .header-left img{
-  height:85px;           /* لوگوی بالا کلان‌تر */
-  display:block;
+  height:85px;
 }
 
 .header-title .pak{
@@ -70,13 +69,11 @@ body{
   width:95px;
   height:120px;
   border:1px solid #ccc;
-  display:block;
 }
 
 .qr img{
   width:95px;
   height:95px;
-  display:block;
 }
 
 .name{
@@ -96,16 +93,12 @@ body{
   font-weight:bold;
 }
 
-/* ===== APPLICATION DETAILS (فاصله بیشتر مثل اصل) ===== */
+/* ===== APPLICATION DETAILS ===== */
 .app-row{
   display:grid;
-  grid-template-columns: 320px auto; /* فاصله زیادتر */
+  grid-template-columns:320px auto;
   font-size:12.5px;
   margin-bottom:16px;
-}
-
-.app-row b{
-  font-weight:bold;
 }
 
 /* ===== TABLE ===== */
@@ -133,10 +126,6 @@ td.label{
   font-size:11.5px;
 }
 
-.conditions ul{
-  margin:6px 0 0 18px;
-}
-
 /* ===== MRZ ===== */
 .mrz{
   margin-top:18px;
@@ -151,9 +140,8 @@ td.label{
 }
 
 .footer img{
-  height:42px;
-  display:block;
-  filter:grayscale(100%) brightness(0); /* لوگوی پایین سیاه */
+  height:40px;
+  filter:grayscale(100%) brightness(0); /* سیاه */
 }
 
 .footer-date{
@@ -217,7 +205,7 @@ td.label{
 </table>
 </div>
 
-<!-- VISA GRANT DETAILS -->
+<!-- VISA DETAILS -->
 <div class="section">
 <h3>Visa Grant Details</h3>
 <table>
@@ -252,10 +240,10 @@ V&lt;PAKHUSSIEN&lt;KHIL&lt;NEMATULLAH&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt
 88004554637&lt;2AFG0006219M2509127P05653262&lt;&lt;&lt;&lt;
 </div>
 
-<!-- FOOTER -->
+<!-- FOOTER (فقط لوگوی سیاه + تاریخ) -->
 <div class="footer">
-<img src="logo.jpg">
-<div class="footer-date">13 Mar 2025</div>
+  <img src="emblem.png">
+  <div class="footer-date">13 Mar 2025</div>
 </div>
 
 </div>
