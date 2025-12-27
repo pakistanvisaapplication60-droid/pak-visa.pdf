@@ -29,7 +29,7 @@ body{
   justify-content:space-between;
   align-items:center;
   border-bottom:3px solid #1f4fa3;
-  padding-bottom:12px;
+  padding-bottom:10px;
 }
 
 .header-left{
@@ -39,7 +39,7 @@ body{
 }
 
 .header-left img{
-  height:85px;
+  height:80px;
 }
 
 .header-title .pak{
@@ -84,7 +84,7 @@ body{
 
 /* ===== SECTIONS ===== */
 .section{
-  margin-top:18px;
+  margin-top:20px;
 }
 
 .section h3{
@@ -93,12 +93,13 @@ body{
   font-weight:bold;
 }
 
-/* ===== APPLICATION DETAILS ===== */
+/* ===== APPLICATION DETAILS (فاصله دقیق مثل اصل) ===== */
 .app-row{
   display:grid;
-  grid-template-columns:320px auto;
+  grid-template-columns:260px 1fr;
+  column-gap:90px;
   font-size:12.5px;
-  margin-bottom:16px;
+  margin-bottom:14px;
 }
 
 /* ===== TABLE ===== */
@@ -136,12 +137,12 @@ td.label{
 
 /* ===== FOOTER ===== */
 .footer{
-  margin-top:18px;
+  margin-top:20px;
 }
 
 .footer img{
-  height:40px;
-  filter:grayscale(100%) brightness(0); /* سیاه */
+  height:42px;
+  filter:grayscale(100%) brightness(0);
 }
 
 .footer-date{
@@ -184,12 +185,12 @@ td.label{
 <h3>Application Details</h3>
 
 <div class="app-row">
-  <b>Date of Visa Application</b>
+  <b>Date of Visa Application:</b>
   <div>2024-12-02</div>
 </div>
 
 <div class="app-row">
-  <b>Visa Reference Number</b>
+  <b>Visa Reference Number:</b>
   <div>88004554637</div>
 </div>
 </div>
@@ -240,9 +241,9 @@ V&lt;PAKHUSSIEN&lt;KHIL&lt;NEMATULLAH&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt
 88004554637&lt;2AFG0006219M2509127P05653262&lt;&lt;&lt;&lt;
 </div>
 
-<!-- FOOTER (فقط لوگوی سیاه + تاریخ) -->
+<!-- FOOTER (دقیق مثل اصل) -->
 <div class="footer">
-  <img src="emblem.png">
+  <img src="logo.jpg"><br>
   <div class="footer-date">13 Mar 2025</div>
 </div>
 
