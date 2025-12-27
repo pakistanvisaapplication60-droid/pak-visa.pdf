@@ -28,18 +28,18 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  border-bottom:4px solid #1f4fa3;
-  padding-bottom:8px;
+  border-bottom:3px solid #1f4fa3;
+  padding-bottom:6px;
 }
 
 .header-left{
   display:flex;
   align-items:center;
-  gap:14px;
+  gap:10px;
 }
 
 .header-left img{
-  height:62px; /* لوگوی بالا بزرگ‌تر */
+  height:48px;
 }
 
 .header-title{
@@ -47,18 +47,18 @@ body{
 }
 
 .header-title .pak{
-  font-size:28px;
+  font-size:26px;
   font-weight:bold;
   color:#1a7f3c;
 }
 
 .header-title .sub{
-  font-size:12px;
+  font-size:11px;
   text-transform:uppercase;
 }
 
 .header-right{
-  font-size:16px;
+  font-size:15px;
   font-weight:bold;
 }
 
@@ -71,7 +71,7 @@ body{
 
 .photo img{
   width:95px;
-  height:115px;
+  height:120px;
   border:1px solid #ccc;
   object-fit:cover;
 }
@@ -83,7 +83,7 @@ body{
 }
 
 .name{
-  margin-top:6px;
+  margin-top:5px;
   font-size:13px;
   font-weight:bold;
 }
@@ -99,7 +99,7 @@ body{
   font-weight:bold;
 }
 
-/* ===== TABLE (بدون خانه) ===== */
+/* ===== APPLICATION DETAILS (همان جدول قبلی) ===== */
 table{
   width:100%;
   border-collapse:collapse;
@@ -107,19 +107,26 @@ table{
 }
 
 td{
-  padding:4px 2px;
-  border:none;          /* ❌ بدون خانه */
+  border:1px solid #e5e5e5;
+  padding:6px;
 }
 
 td.label{
   width:40%;
   font-weight:bold;
+  background:#fafafa;
 }
 
-/* ===== CONDITIONS (دارای رنگ) ===== */
+/* ===== PLAIN TEXT (بدون خانه مثل اصل) ===== */
+.plain{
+  font-size:12.5px;
+  line-height:1.7;
+}
+
+/* ===== CONDITIONS ===== */
 .conditions{
-  background:#f3f3f3;   /* مطابق اصل */
-  padding:10px;
+  background:#f4f4f4;
+  padding:8px 10px;
   font-size:11.5px;
 }
 
@@ -142,12 +149,12 @@ td.label{
 
 .footer img{
   height:38px;
-  filter:grayscale(100%); /* لوگوی پایین سیاه */
+  filter:grayscale(100%);
 }
 
 .footer-date{
   font-size:11px;
-  margin-top:4px;
+  margin-top:3px;
 }
 </style>
 </head>
@@ -180,40 +187,70 @@ td.label{
   </div>
 </div>
 
-<!-- APPLICATION DETAILS -->
+<!-- APPLICATION DETAILS (همان مثل قبل) -->
 <div class="section">
 <h3>Application Details</h3>
 <table>
-<tr><td class="label">Date of Visa Application</td><td>2024-12-02</td></tr>
-<tr><td class="label">Visa Reference Number</td><td>88004554637</td></tr>
+<tr>
+  <td class="label">Date of Visa Application</td>
+  <td>2024-12-02</td>
+</tr>
+<tr>
+  <td class="label">Visa Reference Number</td>
+  <td>88004554637</td>
+</tr>
 </table>
 </div>
 
-<!-- APPLICANT DETAILS -->
+<!-- APPLICANT DETAILS (بدون خانه مثل اصل) -->
 <div class="section">
 <h3>Applicant's Details</h3>
-<table>
-<tr><td class="label">Applicant Name</td><td>Hussien Khil Nematullah</td></tr>
-<tr><td class="label">Date of Birth</td><td>21 Jun 2000</td></tr>
-<tr><td class="label">Nationality</td><td>Afghan</td></tr>
-<tr><td class="label">Passport Number</td><td>P05653262</td></tr>
-</table>
+<div class="plain">
+<b>Applicant Name</b><br>
+Hussien Khil Nematullah<br><br>
+
+<b>Date of Birth</b><br>
+21 Jun 2000<br><br>
+
+<b>Nationality</b><br>
+Afghan<br><br>
+
+<b>Passport Number</b><br>
+P05653262
+</div>
 </div>
 
-<!-- VISA DETAILS -->
+<!-- VISA GRANT DETAILS (بدون خانه مثل اصل) -->
 <div class="section">
 <h3>Visa Grant Details</h3>
-<table>
-<tr><td class="label">Visa Category</td><td>Tourist / Visit</td></tr>
-<tr><td class="label">Visa Sub Category</td><td>Individual (less Than 3 Months)</td></tr>
-<tr><td class="label">Application Type</td><td>Entry</td></tr>
-<tr><td class="label">Visa Grant Date</td><td>13 Mar 2025</td></tr>
-<tr><td class="label">Travel Document Country</td><td>Afghanistan</td></tr>
-<tr><td class="label">Stay Facility</td><td>Multiple Entry - Upto 1 Year</td></tr>
-<tr><td class="label">Visa Start Date</td><td>13 Mar 2025</td></tr>
-<tr><td class="label">Visa End Date</td><td>12 Sep 2025</td></tr>
-<tr><td class="label">Visa Duration</td><td>60 Day(s)</td></tr>
-</table>
+<div class="plain">
+<b>Visa Category</b><br>
+Tourist / Visit<br><br>
+
+<b>Visa Sub Category</b><br>
+Individual (less Than 3 Months)<br><br>
+
+<b>Application Type</b><br>
+Entry<br><br>
+
+<b>Visa Grant Date</b><br>
+13 Mar 2025<br><br>
+
+<b>Travel Document Country</b><br>
+Afghanistan<br><br>
+
+<b>Stay Facility</b><br>
+Multiple Entry - Upto 1 Year<br><br>
+
+<b>Visa Start Date</b><br>
+13 Mar 2025<br><br>
+
+<b>Visa End Date</b><br>
+12 Sep 2025<br><br>
+
+<b>Visa Duration</b><br>
+60 Day(s)
+</div>
 </div>
 
 <!-- CONDITIONS -->
@@ -231,7 +268,7 @@ Entry may be made on any date between visa start date & visa end date.
 
 <!-- MRZ -->
 <div class="mrz">
-V&lt;PAKHUSSIEN&lt;KHIL&lt;NEMATULLAH&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
+V&lt;PAKHUSSIEN&lt;KHIL&lt;NEMATULLAH&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
 88004554637&lt;2AFG0006219M2509127P05653262&lt;&lt;&lt;&lt;
 </div>
 
