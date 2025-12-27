@@ -10,9 +10,14 @@
   margin:15mm;
 }
 
-body{
+*{
   margin:0;
+  padding:0;
+  box-sizing:border-box;
   font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
   background:#fff;
   color:#222;
 }
@@ -28,41 +33,20 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  padding-bottom:8px;
   border-bottom:3px solid #1f4fa3;
-  padding-bottom:10px;
-}
-
-.header-left{
-  display:flex;
-  align-items:center;
-  gap:16px;
 }
 
 .header-left img{
-  height:80px;
-}
-
-.header-title{
-  line-height:1.2;
-}
-
-.header-title .pak{
-  font-size:32px;
-  font-weight:bold;
-  color:#1a7f3c;
-}
-
-.header-title .sub{
-  font-size:12px;
-  text-transform:uppercase;
+  height:70px;
 }
 
 .header-right{
-  font-size:16px;
+  font-size:14px;
   font-weight:bold;
 }
 
-/* ===== PHOTO + QR ===== */
+/* ===== TOP ===== */
 .top{
   display:flex;
   justify-content:space-between;
@@ -75,35 +59,33 @@ body{
   border:1px solid #ccc;
 }
 
-.qr img{
-  width:95px;
-  height:95px;
-}
-
 .name{
   margin-top:6px;
   font-size:13px;
   font-weight:bold;
 }
 
+.qr img{
+  width:90px;
+}
+
 /* ===== SECTIONS ===== */
 .section{
-  margin-top:20px;
+  margin-top:18px;
 }
 
 .section h3{
-  margin:0 0 12px;
+  margin-bottom:10px;
   font-size:13px;
   font-weight:bold;
 }
 
-/* ===== APPLICATION DETAILS ===== */
 .app-row{
   display:grid;
   grid-template-columns:260px 1fr;
   column-gap:90px;
   font-size:12.5px;
-  margin-bottom:14px;
+  margin-bottom:12px;
 }
 
 /* ===== TABLE ===== */
@@ -121,37 +103,40 @@ td{
 td.label{
   width:38%;
   font-weight:bold;
-  background:#fafafa;
+  background:#f7f7f7;
 }
 
 /* ===== CONDITIONS ===== */
 .conditions{
-  background:#f2f2f2;
+  background:#f1f1f1;
   padding:10px;
   font-size:11.5px;
 }
 
 /* ===== MRZ ===== */
 .mrz{
-  margin-top:18px;
+  margin-top:15px;
   font-family:"Courier New", monospace;
   font-size:11px;
-  letter-spacing:1px;
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER (لوگوی پایین) ===== */
 .footer{
-  margin-top:20px;
+  margin-top:12px;
+  background:none;        /* ❌ هیچ نوار */
+  padding:0;
 }
 
 .footer img{
-  height:42px;
-  filter:grayscale(100%) brightness(0);
+  display:block;
+  height:40px;
+  background:none !important;   /* ❌ حذف بک‌گراند */
+  filter:grayscale(100%) contrast(160%); /* کمی تیره و تیز */
 }
 
 .footer-date{
   font-size:11px;
-  margin-top:4px;
+  margin-top:2px;
 }
 </style>
 </head>
@@ -159,98 +144,73 @@ td.label{
 <body>
 <div class="page">
 
-<!-- HEADER -->
-<div class="header">
-  <div class="header-left">
+  <div class="header">
+    <div class="header-left">
+      <img src="logo.jpg">
+    </div>
+    <div class="header-right">VISA GRANT NOTICE</div>
+  </div>
+
+  <div class="top">
+    <div>
+      <div class="photo"><img src="photo.jpg"></div>
+      <div class="name">Hussien Khil Nematullah</div>
+    </div>
+    <div class="qr"><img src="qr.png"></div>
+  </div>
+
+  <div class="section">
+    <h3>Application Details</h3>
+    <div class="app-row"><b>Date of Visa Application:</b><div>2024-12-02</div></div>
+    <div class="app-row"><b>Visa Reference Number:</b><div>88004554637</div></div>
+  </div>
+
+  <div class="section">
+    <h3>Applicant's Details</h3>
+    <table>
+      <tr><td class="label">Applicant Name</td><td>Hussien Khil Nematullah</td></tr>
+      <tr><td class="label">Date of Birth</td><td>21 Jun 2000</td></tr>
+      <tr><td class="label">Nationality</td><td>Afghan</td></tr>
+      <tr><td class="label">Passport Number</td><td>P05653262</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3>Visa Grant Details</h3>
+    <table>
+      <tr><td class="label">Visa Category</td><td>Tourist / Visit</td></tr>
+      <tr><td class="label">Visa Sub Category</td><td>Individual (less Than 3 Months)</td></tr>
+      <tr><td class="label">Application Type</td><td>Entry</td></tr>
+      <tr><td class="label">Visa Grant Date</td><td>13 Mar 2025</td></tr>
+      <tr><td class="label">Travel Document Country</td><td>Afghanistan</td></tr>
+      <tr><td class="label">Stay Facility</td><td>Multiple Entry - Upto 1 Year</td></tr>
+      <tr><td class="label">Visa Start Date</td><td>13 Mar 2025</td></tr>
+      <tr><td class="label">Visa End Date</td><td>12 Sep 2025</td></tr>
+      <tr><td class="label">Visa Duration</td><td>60 Day(s)</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3>Visa Conditions and Entitlements</h3>
+    <div class="conditions">
+      Entry may be made on any date between visa start date & visa end date.
+      <ul>
+        <li>Visa Cancellation</li>
+        <li>Detention</li>
+        <li>Removal from Pakistan</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mrz">
+    V&lt;PAKHUSSIEN&lt;&lt;KHIL&lt;&lt;NEMATULLAH&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
+    88004554637&lt;2AFG0006219M2509127P05653262&lt;&lt;&lt;
+  </div>
+
+  <div class="footer">
     <img src="logo.jpg">
-    <div class="header-title">
-      <div class="pak">Pak Visa</div>
-      <div class="sub">Islamic Republic of Pakistan<br>Ministry of Interior</div>
-    </div>
+    <div class="footer-date">13 Mar 2025</div>
   </div>
-  <div class="header-right">VISA GRANT NOTICE</div>
-</div>
-
-<!-- PHOTO + QR -->
-<div class="top">
-  <div>
-    <div class="photo">
-      <img src="photo.jpg">
-    </div>
-    <div class="name">Hussien Khil Nematullah</div>
-  </div>
-  <div class="qr">
-    <img src="Qr.jpg">
-  </div>
-</div>
-
-<!-- APPLICATION DETAILS -->
-<div class="section">
-<h3>Application Details</h3>
-
-<div class="app-row">
-  <b>Date of Visa Application:</b>
-  <div>2024-12-02</div>
-</div>
-
-<div class="app-row">
-  <b>Visa Reference Number:</b>
-  <div>88004554637</div>
-</div>
-</div>
-
-<!-- APPLICANT DETAILS -->
-<div class="section">
-<h3>Applicant's Details</h3>
-<table>
-<tr><td class="label">Applicant Name</td><td>Hussien Khil Nematullah</td></tr>
-<tr><td class="label">Date of Birth</td><td>21 Jun 2000</td></tr>
-<tr><td class="label">Nationality</td><td>Afghan</td></tr>
-<tr><td class="label">Passport Number</td><td>P05653262</td></tr>
-</table>
-</div>
-
-<!-- VISA GRANT DETAILS -->
-<div class="section">
-<h3>Visa Grant Details</h3>
-<table>
-<tr><td class="label">Visa Category</td><td>Tourist / Visit</td></tr>
-<tr><td class="label">Visa Sub Category</td><td>Individual (less Than 3 Months)</td></tr>
-<tr><td class="label">Application Type</td><td>Entry</td></tr>
-<tr><td class="label">Visa Grant Date</td><td>13 Mar 2025</td></tr>
-<tr><td class="label">Travel Document Country</td><td>Afghanistan</td></tr>
-<tr><td class="label">Stay Facility</td><td>Multiple Entry - Upto 1 Year</td></tr>
-<tr><td class="label">Visa Start Date</td><td>13 Mar 2025</td></tr>
-<tr><td class="label">Visa End Date</td><td>12 Sep 2025</td></tr>
-<tr><td class="label">Visa Duration</td><td>60 Day(s)</td></tr>
-</table>
-</div>
-
-<!-- CONDITIONS (کامل مثل اصل) -->
-<div class="section">
-<h3>Visa Conditions and Entitlements</h3>
-<div class="conditions">
-Entry may be made on any date between visa start date & visa end date.<br>
-This visa is granted based upon information and documents provided by the applicant; any incorrect or misleading information may lead to:
-<ul>
-<li>Visa Cancellation</li>
-<li>Detention</li>
-<li>Removal from Pakistan</li>
-</ul>
-</div>
-</div>
-
-<!-- MRZ (اصلاح هاردویکی کامل) -->
-<div class="mrz">
-V&lt;PAKHUSSIEN&lt;&lt;KHIL&lt;&lt;NEMATULLAH&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
-88004554637&lt;2AFG0006219M2509127P05653262&lt;&lt;&lt;&lt;&lt;&lt;
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-  <img src="logo.jpg"><br>
-  <div class="footer-date">13 Mar 2025</div>
-</div>
 
 </div>
 </body>
