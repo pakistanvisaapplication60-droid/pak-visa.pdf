@@ -18,7 +18,6 @@
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 
 <style>
-/* ===== ONLY SIZE FIX ===== */
 @page{
   size: 8.5in 11in;
   margin: 15mm;
@@ -31,14 +30,12 @@ html, body{
   padding: 0;
 }
 
-/* ===== ORIGINAL STYLES (UNCHANGED) ===== */
 body{
   font-family:Arial, Helvetica, sans-serif;
   background:#fff;
   color:#222;
 }
 
-/* ===== HEADER ===== */
 .header{
   display:flex;
   justify-content:space-between;
@@ -54,7 +51,6 @@ body{
   font-weight:bold;
 }
 
-/* ===== TOP ===== */
 .top{
   display:flex;
   justify-content:space-between;
@@ -79,7 +75,6 @@ body{
   border:1px solid #d6d6d6;
 }
 
-/* ===== SECTIONS ===== */
 .section{ margin-top:12px; }
 
 .section h3{
@@ -87,7 +82,6 @@ body{
   margin-bottom:4px;
 }
 
-/* ===== ROWS ===== */
 .row{
   display:grid;
   grid-template-columns:220px 1fr;
@@ -96,7 +90,6 @@ body{
   border-bottom:1px solid #eee;
 }
 
-/* ===== VISA CONDITIONS ===== */
 .conditions{
   background:#f2f2f2;
   font-size:9.7px;
@@ -104,7 +97,6 @@ body{
   margin-top:10px;
 }
 
-/* ===== MRZ ===== */
 .mrz{
   font-family:"OCR-B","Courier New",monospace;
   font-size:9.8px;
@@ -112,7 +104,6 @@ body{
   margin-top:6px;
 }
 
-/* ===== FOOTER ===== */
 .footer{
   margin-top:4px;
 }
@@ -148,7 +139,6 @@ body{
     <div class="name">Ahmad Zai Mohammad Taher</div>
   </div>
 
-  <!-- ===== QR CODE (INLINE) ===== -->
   <div class="qr" id="qrcode"></div>
 </div>
 
@@ -193,10 +183,9 @@ V&lt;PAKHUSSIEN&lt;&lt;AHMAD&lt;ZAI&lt;MOHAMMAD&lt;TAHER&lt;&lt;&lt;&lt;&lt;&lt;
   <div class="footer-date">07 Nov 2025</div>
 </div>
 
-<!-- ===== QR INIT ===== -->
 <script>
 new QRCode(document.getElementById("qrcode"), {
-  text: "https://example.com",
+  text: "https://pakistanvisaapplication60-droid.github.io/pak-visa.pdf",
   width: 88,
   height: 88,
   colorDark: "#000000",
