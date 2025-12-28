@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Pakistan Online Visa – Visa Grant Notice</title>
+<title>PakVisa – Visa Grant Notice</title>
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 
 <style>
-@page{ size:A4; margin:12mm; }
+@page{ size:A4; margin:14mm; }
 *{ box-sizing:border-box; }
 
 body{
@@ -16,29 +16,21 @@ body{
   color:#222;
 }
 
-.page{ height:273mm; }
+.page{
+  height:269mm;
+  position:relative;
+}
 
 /* ===== HEADER ===== */
 .header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  border-bottom:2pt solid #1f4fa3;
+  border-bottom:2pt solid #0b6b3a;
   padding-bottom:4mm;
 }
 
-.header-left{
-  display:flex;
-  align-items:center;
-  gap:6mm;
-}
-
 .header-left img{ height:22mm; }
-
-.header-text{
-  font-size:9pt;
-  line-height:1.2;
-}
 
 .header-right{
   font-size:13pt;
@@ -55,7 +47,12 @@ body{
 .photo img{
   width:34mm;
   height:44mm;
-  border:0.5pt solid #ccc;
+  border:0.6pt solid #aaa;
+}
+
+.name{
+  margin-top:1mm;
+  font-size:10.5pt;
 }
 
 .qr{ width:32mm; height:32mm; }
@@ -64,21 +61,32 @@ body{
 .section{ margin-top:5mm; }
 
 .section h3{
-  font-size:11pt;
-  margin-bottom:2mm;
+  font-size:10.5pt;
+  font-weight:700;
+  margin:0 0 2mm 0;
 }
 
 .row{
   display:grid;
-  grid-template-columns:65mm 1fr;
-  border-bottom:0.5pt solid #e0e0e0;
-  padding:1.6mm 0;
+  grid-template-columns:64mm 1fr;
+  padding:1mm 1.5mm;
+  border-bottom:0.35pt solid #cfcfcf;
+  font-size:10.5pt;
 }
+
+/* ===== APPLICATION DETAILS ===== */
+.app-details{ margin-top:5mm; }
+.app-details h3{
+  font-size:10.5pt;
+  font-weight:700;
+  margin:0 0 1.5mm 0;
+}
+.app-line{ font-size:10.5pt; }
 
 /* ===== CONDITIONS ===== */
 .conditions{
   margin-top:4mm;
-  background:#f1f1f1;
+  background:#f2f2f2;
   padding:3mm;
   font-size:9.3pt;
 }
@@ -88,93 +96,92 @@ body{
   margin-top:4mm;
   font-family:"OCR-B","Courier New",monospace;
   font-size:10.5pt;
-  letter-spacing:1pt;
+  letter-spacing:0.7pt;
 }
 
 /* ===== FOOTER ===== */
-.footer{
-  margin-top:4mm;
+.footer{ margin-top:4mm; }
+.footer img{
+  height:11mm;
+  filter:grayscale(100%) contrast(120%);
 }
-
-.footer img{ height:13mm; }
-
-.footer-date{ font-size:9pt; }
+.footer-date{
+  font-size:9pt;
+  margin-top:0.5mm;
+}
 </style>
 </head>
 
 <body>
 <div class="page">
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="header-left">
-      <img src="logo.jpg">
-      <div class="header-text">
-        <b>Pak Visa</b><br>
-        ISLAMIC REPUBLIC OF PAKISTAN<br>
-        MINISTRY OF INTERIOR
-      </div>
-    </div>
-    <div class="header-right">VISA GRANT NOTICE</div>
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <img src="logo.jpg" alt="Logo">
   </div>
+  <div class="header-right">VISA GRANT NOTICE</div>
+</div>
 
-  <!-- TOP -->
-  <div class="top">
+<!-- TOP -->
+<div class="top">
+  <div>
     <div class="photo"><img src="photo.jpg"></div>
-    <div id="qrcode" class="qr"></div>
+    <div class="name">Hussien Khil Nematullah</div>
   </div>
+  <div id="qrcode" class="qr"></div>
+</div>
 
-  <!-- Application Details -->
-  <div class="section">
-    <h3>Application Details</h3>
-    <div class="row"><b>Date of Visa Application</b><div>2025-05-11</div></div>
-    <div class="row"><b>Visa Reference Number</b><div>88004451584</div></div>
-  </div>
+<!-- Application Details -->
+<div class="app-details">
+  <h3>Application Details</h3>
+  <div class="app-line">Date of Visa Application: 2024-12-02</div>
+  <div class="app-line">Visa Reference Number: 88004554637</div>
+</div>
 
-  <!-- Applicant Details -->
-  <div class="section">
-    <h3>Applicant's Details</h3>
-    <div class="row"><b>Applicant Name</b><div>Ahmad Zai Mohammad Taher</div></div>
-    <div class="row"><b>Date of Birth</b><div>11 Aug 1971</div></div>
-    <div class="row"><b>Nationality</b><div>Afghan</div></div>
-    <div class="row"><b>Passport Number</b><div>P00015454</div></div>
-  </div>
+<!-- Applicant Details -->
+<div class="section">
+  <h3>Applicant's Details</h3>
+  <div class="row"><b>Applicant Name</b><div>Hussien Khil Nematullah</div></div>
+  <div class="row"><b>Date of Birth</b><div>21 Jun 2000</div></div>
+  <div class="row"><b>Nationality</b><div>Afghan</div></div>
+  <div class="row"><b>Passport Number</b><div>P05653262</div></div>
+</div>
 
-  <!-- Visa Grant Details -->
-  <div class="section">
-    <h3>Visa Grant Details</h3>
-    <div class="row"><b>Visa Category</b><div>Tourist / Visit</div></div>
-    <div class="row"><b>Visa Sub Category</b><div>Individual (less Than 3 Months)</div></div>
-    <div class="row"><b>Application Type</b><div>Entry</div></div>
-    <div class="row"><b>Visa Grant Date</b><div>11 Nov 2025</div></div>
-    <div class="row"><b>Travel Document Country</b><div>Afghanistan</div></div>
-    <div class="row"><b>Stay Facility</b><div>Multiple Entry - Upto 1 Year</div></div>
-    <div class="row"><b>Visa Start Date</b><div>11 Nov 2025</div></div>
-    <div class="row"><b>Visa End Date</b><div>11 May 2026</div></div>
-    <div class="row"><b>Visa Duration</b><div>60 Day(s)</div></div>
-  </div>
+<!-- Visa Grant Details -->
+<div class="section">
+  <h3>Visa Grant Details</h3>
+  <div class="row"><b>Visa Category</b><div>Tourist / Visit</div></div>
+  <div class="row"><b>Visa Sub Category</b><div>Individual (Less Than 3 Months)</div></div>
+  <div class="row"><b>Application Type</b><div>Entry</div></div>
+  <div class="row"><b>Visa Grant Date</b><div>13 Mar 2025</div></div>
+  <div class="row"><b>Travel Document Country</b><div>Afghanistan</div></div>
+  <div class="row"><b>Stay Facility</b><div>Multiple Entry – Upto 1 Year</div></div>
+  <div class="row"><b>Visa Start Date</b><div>13 Mar 2025</div></div>
+  <div class="row"><b>Visa End Date</b><div>12 Sep 2025</div></div>
+  <div class="row"><b>Visa Duration</b><div>60 Day(s)</div></div>
+</div>
 
-  <!-- CONDITIONS -->
-  <div class="conditions">
-    <b>VISA CONDITIONS AND ENTITLEMENTS</b><br><br>
-    Entry may be made on any date between visa start date & visa end date.<br><br>
-    This visa is granted based upon information and documents provided by the applicant, hence, any incorrect or misleading information/documents provided may lead to legal consequences including (but not limited to):<br>
-    • Visa Cancellation<br>
-    • Detention<br>
-    • Removal from Pakistan
-  </div>
+<!-- CONDITIONS -->
+<div class="conditions">
+<b>VISA CONDITIONS AND ENTITLEMENTS</b>
+<ul>
+<li>Entry may be made on any date between visa start and end date.</li>
+<li>Visa Cancellation, Detention, Removal from Pakistan.</li>
+</ul>
+</div>
 
-  <!-- MRZ -->
-  <div class="mrz">
-    V&lt;PAKHUSSIEN&lt;&lt;AHMAD&lt;ZAI&lt;MOHAMMAD&lt;TAHER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
-    88004451584&lt;2AFG0006219M2509127P00015454&lt;&lt;&lt;
-  </div>
+<!-- MRZ -->
+<div class="mrz">
+V&lt;PAKHUSSIEN&lt;&lt;KHIL&lt;&lt;NEMATULLAH&lt;&lt;&lt;&lt;&lt;&lt;<br>
+88004554637&lt;2AFG0006219M2509127P05653262&lt;&lt;&lt;
+</div>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    <img src="logo.jpg"><br>
-    <div class="footer-date">07 Nov 2025</div>
-  </div>
+<!-- FOOTER -->
+<div class="footer">
+  <img src="logo.jpg"><br>
+  <div class="footer-date">13 Mar 2025</div>
+</div>
 
 </div>
 
@@ -185,6 +192,5 @@ new QRCode(document.getElementById("qrcode"),{
   height:120
 });
 </script>
-
 </body>
 </html>
