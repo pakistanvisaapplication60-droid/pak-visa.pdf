@@ -11,7 +11,9 @@
   margin:14mm;
 }
 
-*{ box-sizing:border-box; }
+*{
+  box-sizing:border-box;
+}
 
 body{
   margin:0;
@@ -20,7 +22,9 @@ body{
   color:#222;
 }
 
-.page{ height:269mm; }
+.page{
+  height:269mm;
+}
 
 /* ===== HEADER ===== */
 .header{
@@ -31,8 +35,14 @@ body{
   padding-bottom:4mm;
 }
 
-.header-left img{ height:22mm; }
-.header-right{ font-size:13pt; font-weight:bold; }
+.header-left img{
+  height:22mm;
+}
+
+.header-right{
+  font-size:13pt;
+  font-weight:bold;
+}
 
 /* ===== TOP ===== */
 .top{
@@ -53,29 +63,32 @@ body{
   font-weight:600;
 }
 
-.qr{ width:32mm; height:32mm; }
+.qr{
+  width:32mm;
+  height:32mm;
+}
 
 /* ===== SECTIONS ===== */
 .section{
-  margin-top:2.5mm; /* کمی کمتر */
+  margin-top:3.2mm;
 }
 
 .section h3{
   font-size:10.3pt;
   font-weight:700;
-  margin:0 0 0.6mm 0;
+  margin:0 0 0.8mm 0;
 }
 
-/* ===== Application Details (FIXED فاصله) ===== */
+/* ===== Application Details ===== */
 .app-line{
   display:flex;
   justify-content:space-between;
   font-size:10.3pt;
-  line-height:1.0;     /* خیلی جمع */
-  margin:0;            /* دقیق مثل نام */
+  line-height:1.05;
+  margin:0 0 0.2mm 0;
 }
 
-/* ===== TABLE ===== */
+/* ===== TABLE ROWS ===== */
 .row{
   display:grid;
   grid-template-columns:62mm 1fr;
@@ -107,9 +120,18 @@ body{
 }
 
 /* ===== FOOTER ===== */
-.footer{ margin-top:4mm; }
-.footer img{ height:11mm; }
-.footer-date{ font-size:9pt; margin-top:0.5mm; }
+.footer{
+  margin-top:4mm;
+}
+
+.footer img{
+  height:11mm;
+}
+
+.footer-date{
+  font-size:9pt;
+  margin-top:0.5mm;
+}
 </style>
 </head>
 
@@ -118,14 +140,18 @@ body{
 
 <!-- HEADER -->
 <div class="header">
-  <div class="header-left"><img src="logo.jpg"></div>
+  <div class="header-left">
+    <img src="logo.jpg">
+  </div>
   <div class="header-right">VISA GRANT NOTICE</div>
 </div>
 
 <!-- TOP -->
 <div class="top">
   <div>
-    <div class="photo"><img src="photo.jpg"></div>
+    <div class="photo">
+      <img src="photo.jpg">
+    </div>
     <div class="name">Hussien Khil Nematullah</div>
   </div>
   <div id="qrcode" class="qr"></div>
