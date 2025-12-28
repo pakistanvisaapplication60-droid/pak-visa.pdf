@@ -7,6 +7,7 @@
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 
 <style>
+/* ===== PAGE SETUP ===== */
 @page{
   size: A4;
   margin: 15mm;
@@ -30,10 +31,12 @@ body{
   color: #222;
 }
 
+/* ===== ONE PAGE ONLY ===== */
 .page{
-  min-height: calc(297mm - 30mm);
+  height: 267mm; /* 297mm - 30mm margins */
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   page-break-inside: avoid;
 }
 
@@ -128,6 +131,15 @@ body{
 
 .footer-date{
   font-size:9.4pt;
+}
+
+/* ===== PRINT LOCK ===== */
+@media print{
+  body{ zoom:1; }
+  .page{
+    height:267mm;
+    overflow:hidden;
+  }
 }
 </style>
 </head>
