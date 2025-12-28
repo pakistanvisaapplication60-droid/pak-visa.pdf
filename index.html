@@ -1,4 +1,4 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,10 +7,10 @@
 <style>
 @page{
   size:A4;
-  margin:15mm;
+  margin:14mm;
 }
 
-html, body{
+html,body{
   width:210mm;
   height:297mm;
   margin:0;
@@ -18,124 +18,136 @@ html, body{
 }
 
 body{
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background:#fff;
   color:#222;
 }
 
 .page{
-  width:210mm;
-  min-height:297mm;
-  margin:0 auto;
+  width:100%;
 }
 
 /* ===== HEADER ===== */
 .header{
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  padding-bottom:8px;
+  align-items:flex-end;
   border-bottom:3px solid #1f4fa3;
+  padding-bottom:6px;
 }
 
-.header-left img{ height:70px; }
-.header-right{ font-size:14px; font-weight:bold; }
+.header-left img{
+  height:62px;
+}
+
+.header-right{
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:.2px;
+}
 
 /* ===== TOP ===== */
 .top{
   display:flex;
   justify-content:space-between;
-  margin-top:18px;
+  margin-top:14px;
 }
 
 .photo img{
-  width:95px;
-  height:120px;
-  border:1px solid #ccc;
+  width:92px;
+  height:112px;
+  border:1px solid #d0d0d0;
 }
 
 .name{
-  margin-top:6px;
-  font-size:13px;
+  margin-top:3px;
+  font-size:11px;
   font-weight:bold;
 }
 
 .qr img{
-  width:90px;
-  height:90px;
-  border:1px solid #ccc;
+  width:88px;
+  height:88px;
+  border:1px solid #d0d0d0;
 }
 
-/* ===== SECTIONS ===== */
-.section{ margin-top:18px; }
+/* ===== SECTION ===== */
+.section{
+  margin-top:13px;
+}
 
 .section h3{
-  margin:0 0 6px;
-  font-size:13px;
+  font-size:11px;
+  margin:0 0 4px 0;
   font-weight:bold;
 }
 
 /* ===== APPLICATION DETAILS ===== */
 .app-row{
   display:grid;
-  grid-template-columns:260px 1fr;
-  column-gap:90px;
-  font-size:12.5px;
-  margin-bottom:8px;
+  grid-template-columns:210px auto;
+  font-size:10.8px;
+  margin-bottom:4px;
 }
 
 /* ===== TABLE ===== */
 table{
   width:100%;
   border-collapse:collapse;
-  font-size:12.5px;
+  font-size:10.8px;
 }
 
 td{
-  border:1px solid #dcdcdc;
-  padding:6px 8px;
+  border:1px solid #dedede;
+  padding:4px 6px;
 }
 
 td.label{
   width:38%;
   font-weight:bold;
-  background:#f7f7f7;
+  background:#f6f6f6;
 }
 
 /* ===== VISA CONDITIONS ===== */
 .visa-conditions{
-  background:#f3f3f3;
-  padding:8px 10px;
-  font-size:11px;
-  line-height:1.35;
+  background:#f2f2f2;
+  padding:6px 8px;
+  font-size:9.8px;
+  line-height:1.25;
 }
 
-.visa-conditions h3,
-.visa-conditions p,
-.visa-conditions ul,
-.visa-conditions li{
-  margin:0;
-  padding:0;
+.visa-conditions h3{
+  font-size:10.8px;
+  margin-bottom:2px;
 }
 
 .visa-conditions ul{
+  margin:2px 0 0;
   padding-left:14px;
 }
 
 /* ===== MRZ ===== */
 .mrz{
-  margin-top:10px;
+  margin-top:7px;
   font-family:"OCR-B","Courier New",monospace;
-  font-size:10.8px;
-  letter-spacing:0.9px;
-  line-height:1.25;
+  font-size:9.9px;
+  letter-spacing:.85px;
+  line-height:1.15;
   white-space:nowrap;
 }
 
 /* ===== FOOTER ===== */
-.footer{ margin-top:4px; }
-.footer img{ height:38px; }
-.footer-date{ font-size:10.5px; }
+.footer{
+  margin-top:3px;
+}
+
+.footer img{
+  height:32px;
+}
+
+.footer-date{
+  font-size:9.5px;
+}
 </style>
 </head>
 
@@ -166,8 +178,8 @@ td.label{
 <!-- APPLICATION DETAILS -->
 <div class="section">
   <h3>Application Details</h3>
-  <div class="app-row"><b>Date of Visa Application:</b><div>2024-12-02</div></div>
-  <div class="app-row"><b>Visa Reference Number:</b><div>88004554637</div></div>
+  <div class="app-row"><b>Date of Visa Application</b><div>2024-12-02</div></div>
+  <div class="app-row"><b>Visa Reference Number</b><div>88004554637</div></div>
 </div>
 
 <!-- APPLICANT DETAILS -->
@@ -217,7 +229,7 @@ td.label{
 
 <!-- MRZ -->
 <div class="mrz">
-V&lt;PAKHUSSIEN&lt;&lt;KHIL&lt;&lt;NEMATULLAH&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
+V&lt;PAKHUSSIEN&lt;&lt;KHIL&lt;&lt;NEMATULLAH&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
 88004554637&lt;2AFG0006219M2509127P05653262&lt;&lt;&lt;
 </div>
 
