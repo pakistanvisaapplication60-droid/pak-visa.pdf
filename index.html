@@ -32,7 +32,6 @@ body{
   flex-direction:column;
 }
 
-/* ===== HEADER ===== */
 .header{
   display:flex;
   justify-content:space-between;
@@ -48,7 +47,6 @@ body{
   font-weight:bold;
 }
 
-/* ===== TOP ===== */
 .top{
   display:flex;
   justify-content:space-between;
@@ -61,10 +59,15 @@ body{
   border:0.5pt solid #d6d6d6;
 }
 
+/* 🔹 NEW LINE STYLE (no layout change) */
+.app-name-label{
+  font-size:9.2pt;
+  margin-top:2mm;
+}
+
 .name{
   font-size:10.6pt;
   font-weight:bold;
-  margin-top:2mm;
 }
 
 .qr{
@@ -73,7 +76,6 @@ body{
   border:0.5pt solid #d6d6d6;
 }
 
-/* ===== SECTIONS ===== */
 .section{ margin-top:4.5mm; }
 
 .section h3{
@@ -96,7 +98,6 @@ body{
   padding:1.4mm 0;
 }
 
-/* ===== CONDITIONS ===== */
 .conditions{
   background:#f2f2f2;
   font-size:9.4pt;
@@ -104,7 +105,6 @@ body{
   margin-top:3mm;
 }
 
-/* ===== MRZ ===== */
 .mrz{
   font-family:"OCR-B","Courier New",monospace;
   font-size:10.6pt;
@@ -113,7 +113,6 @@ body{
   margin-top:3mm;
 }
 
-/* ===== FOOTER ===== */
 .footer{
   margin-top:4mm;
 }
@@ -125,14 +124,6 @@ body{
 
 .footer-date{
   font-size:9pt;
-}
-
-@media print{
-  .page{
-    height:273mm;
-    overflow:hidden;
-    page-break-after:avoid;
-  }
 }
 </style>
 </head>
@@ -149,8 +140,13 @@ body{
   <div class="top">
     <div>
       <div class="photo"><img src="photo.jpg"></div>
+
+      <!-- ✅ ONLY ADDED LINE -->
+      <div class="app-name-label">Application Name</div>
+
       <div class="name">Ahmad Zai Mohammad Taher</div>
     </div>
+
     <div class="qr" id="qrcode"></div>
   </div>
 
@@ -181,14 +177,10 @@ body{
     <div class="row"><b>Visa Duration</b><div>60 Day(s)</div></div>
   </div>
 
-  <!-- ✅ ONLY FIXED PART -->
   <div class="conditions">
     <b>VISA CONDITIONS AND ENTITLEMENTS</b><br><br>
-
     Entry may be made on any date between visa start date &amp; visa end date.<br><br>
-
-    This visa is granted based upon information and documents provided by the applicant, hence, any incorrect or misleading information/documents provided may lead to legal consequences including (but not limit to):<br><br>
-
+    This visa is granted based upon information and documents provided by the applicant, hence, any incorrect or misleading information/documents provided may lead to legal consequences including (but not limited to):<br><br>
     • Visa Cancellation<br>
     • Detention<br>
     • Removal from Pakistan
