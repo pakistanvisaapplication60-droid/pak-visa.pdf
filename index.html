@@ -81,21 +81,21 @@ body{
   margin:0 0 2mm 0;
 }
 
-/* rows WITHOUT box (Application Details) */
-.row-nobox{
-  display:grid;
-  grid-template-columns:68mm 1fr;
-  font-size:10.4pt;
-  padding:1.4mm 0;
-}
-
-/* rows WITH line (Applicant + Visa Details) */
+/* normal rows (with line) */
 .row{
   display:grid;
   grid-template-columns:68mm 1fr;
   font-size:10.4pt;
   padding:1.4mm 0;
   border-bottom:0.4pt solid #e6e6e6;
+}
+
+/* rows WITHOUT line (Application Details like original) */
+.row-noline{
+  display:grid;
+  grid-template-columns:68mm 1fr;
+  font-size:10.4pt;
+  padding:1.4mm 0;
 }
 
 /* ===== CONDITIONS ===== */
@@ -157,14 +157,14 @@ body{
     <div class="qr" id="qrcode"></div>
   </div>
 
-  <!-- Application Details (NO BOXES like original) -->
+  <!-- Application Details (NO LINES like original) -->
   <div class="section">
     <h3>Application Details</h3>
-    <div class="row-nobox"><b>Date of Visa Application:</b><div>2025-05-11</div></div>
-    <div class="row-nobox"><b>Visa Reference Number:</b><div>88004451584</div></div>
+    <div class="row-noline"><b>Date of Visa Application:</b><div>2025-05-11</div></div>
+    <div class="row-noline"><b>Visa Reference Number:</b><div>88004451584</div></div>
   </div>
 
-  <!-- Applicant Details (WITH LINES) -->
+  <!-- Applicant's Details (WITH LINES) -->
   <div class="section">
     <h3>Applicant's Details</h3>
     <div class="row"><b>Applicant Name</b><div>Ahmad Zai Mohammad Taher</div></div>
