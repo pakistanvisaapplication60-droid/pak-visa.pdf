@@ -1,4 +1,4 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,7 +6,11 @@
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 
 <style>
-@page{ size:A4; margin:14mm; }
+@page{
+  size:A4;
+  margin:14mm;
+}
+
 *{ box-sizing:border-box; }
 
 body{
@@ -16,10 +20,7 @@ body{
   color:#222;
 }
 
-.page{
-  height:269mm;
-  position:relative;
-}
+.page{ height:269mm; }
 
 /* ===== HEADER ===== */
 .header{
@@ -31,17 +32,13 @@ body{
 }
 
 .header-left img{ height:22mm; }
-
-.header-right{
-  font-size:13pt;
-  font-weight:bold;
-}
+.header-right{ font-size:13pt; font-weight:bold; }
 
 /* ===== TOP ===== */
 .top{
   display:flex;
   justify-content:space-between;
-  margin-top:6mm;
+  margin-top:5mm;
 }
 
 .photo img{
@@ -51,37 +48,47 @@ body{
 }
 
 .name{
-  margin-top:1mm;
-  font-size:10.5pt;
+  margin-top:0.5mm;
+  font-size:10.2pt;
+  font-weight:600;
 }
 
 .qr{ width:32mm; height:32mm; }
 
 /* ===== SECTIONS ===== */
-.section{ margin-top:5mm; }
+.section{
+  margin-top:2.5mm; /* کمی کمتر */
+}
 
 .section h3{
-  font-size:10.5pt;
+  font-size:10.3pt;
   font-weight:700;
-  margin:0 0 2mm 0;
+  margin:0 0 0.6mm 0;
 }
 
+/* ===== Application Details (FIXED فاصله) ===== */
+.app-line{
+  display:flex;
+  justify-content:space-between;
+  font-size:10.3pt;
+  line-height:1.0;     /* خیلی جمع */
+  margin:0;            /* دقیق مثل نام */
+}
+
+/* ===== TABLE ===== */
 .row{
   display:grid;
-  grid-template-columns:64mm 1fr;
-  padding:1mm 1.5mm;
+  grid-template-columns:62mm 1fr;
+  padding:0.6mm 1.2mm;
+  font-size:10.3pt;
+  border-left:0.35pt solid #cfcfcf;
+  border-right:0.35pt solid #cfcfcf;
   border-bottom:0.35pt solid #cfcfcf;
-  font-size:10.5pt;
 }
 
-/* ===== APPLICATION DETAILS ===== */
-.app-details{ margin-top:5mm; }
-.app-details h3{
-  font-size:10.5pt;
-  font-weight:700;
-  margin:0 0 1.5mm 0;
+.row:first-of-type{
+  border-top:0.35pt solid #cfcfcf;
 }
-.app-line{ font-size:10.5pt; }
 
 /* ===== CONDITIONS ===== */
 .conditions{
@@ -101,14 +108,8 @@ body{
 
 /* ===== FOOTER ===== */
 .footer{ margin-top:4mm; }
-.footer img{
-  height:11mm;
-  filter:grayscale(100%) contrast(120%);
-}
-.footer-date{
-  font-size:9pt;
-  margin-top:0.5mm;
-}
+.footer img{ height:11mm; }
+.footer-date{ font-size:9pt; margin-top:0.5mm; }
 </style>
 </head>
 
@@ -117,9 +118,7 @@ body{
 
 <!-- HEADER -->
 <div class="header">
-  <div class="header-left">
-    <img src="logo.jpg" alt="Logo">
-  </div>
+  <div class="header-left"><img src="logo.jpg"></div>
   <div class="header-right">VISA GRANT NOTICE</div>
 </div>
 
@@ -133,10 +132,16 @@ body{
 </div>
 
 <!-- Application Details -->
-<div class="app-details">
+<div class="section">
   <h3>Application Details</h3>
-  <div class="app-line">Date of Visa Application: 2024-12-02</div>
-  <div class="app-line">Visa Reference Number: 88004554637</div>
+  <div class="app-line">
+    <b>Date of Visa Application</b>
+    <span>2024-12-02</span>
+  </div>
+  <div class="app-line">
+    <b>Visa Reference Number</b>
+    <span>88004554637</span>
+  </div>
 </div>
 
 <!-- Applicant Details -->
@@ -166,8 +171,8 @@ body{
 <div class="conditions">
 <b>VISA CONDITIONS AND ENTITLEMENTS</b>
 <ul>
-<li>Entry may be made on any date between visa start and end date.</li>
-<li>Visa Cancellation, Detention, Removal from Pakistan.</li>
+  <li>Entry may be made on any date between visa start and end date.</li>
+  <li>Visa Cancellation, Detention, Removal from Pakistan.</li>
 </ul>
 </div>
 
@@ -188,9 +193,11 @@ V&lt;PAKHUSSIEN&lt;&lt;KHIL&lt;&lt;NEMATULLAH&lt;&lt;&lt;&lt;&lt;&lt;<br>
 <script>
 new QRCode(document.getElementById("qrcode"),{
   text:"https://visa.nadra.gov.pk/",
-  width:120,
-  height:120
+  width:128,
+  height:128,
+  correctLevel:QRCode.CorrectLevel.H
 });
 </script>
+
 </body>
 </html>
