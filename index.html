@@ -2,218 +2,203 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Visa Grant Notice</title>
+<title>Pakistan Online Visa – Visa Grant Notice</title>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 
 <style>
 @page{
   size:A4;
-  margin:10mm;
+  margin:12mm;
+}
+
+*{ box-sizing:border-box; }
+
+html,body{
+  margin:0;
+  padding:0;
 }
 
 body{
-  margin:0;
-  padding:0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size:11px;
-  color:#000;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:11pt;
+  background:#fff;
+  color:#222;
 }
 
-.wrapper{
-  width:100%;
+.page{
+  height:273mm;
+  display:flex;
+  flex-direction:column;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 .header{
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  border-bottom:3px solid #2f5f7f;
-  padding-bottom:5px;
+  align-items:flex-end;
+  border-bottom:2pt solid #1f4fa3;
+  padding-bottom:4mm;
 }
 
-.header-left{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-
-.header-left img{
-  height:42px;
-}
-
-.header-title{
-  font-size:20px;
-  font-weight:bold;
-  color:#2f5f7f;
-}
-
-.header-sub{
-  font-size:10px;
-}
+.header-left img{ height:22mm; }
 
 .header-right{
-  font-size:14px;
+  font-size:13.8pt;
   font-weight:bold;
 }
 
-/* TOP */
+/* ===== TOP ===== */
 .top{
   display:flex;
   justify-content:space-between;
-  margin-top:8px;
+  margin-top:6mm;
 }
 
-.photo{
-  width:85px;
-  height:105px;
-  border:1px solid #ccc;
-  object-fit:cover;
+.photo img{
+  width:34mm;
+  height:44mm;
+  border:0.5pt solid #d6d6d6;
+}
+
+.name{
+  font-size:10.6pt;
+  font-weight:bold;
+  margin-top:2mm;
 }
 
 .qr{
-  width:85px;
-  height:85px;
+  width:30mm;
+  height:30mm;
+  border:0.5pt solid #d6d6d6;
 }
 
-/* SECTION */
-.section{
-  margin-top:6px;
-}
+/* ===== SECTIONS ===== */
+.section{ margin-top:4.5mm; }
 
 .section h3{
-  font-size:11px;
-  margin:4px 0;
-  border-bottom:1px solid #ccc;
+  font-size:11pt;
+  margin:0 0 2mm 0;
 }
 
-/* TABLE */
-table{
-  width:100%;
-  border-collapse:collapse;
+.row{
+  display:grid;
+  grid-template-columns:68mm 1fr;
+  font-size:10.4pt;
+  padding:1.4mm 0;
+  border-bottom:0.4pt solid #e6e6e6;
 }
 
-td{
-  padding:3px 4px;
-}
-
-td.label{
-  width:35%;
-  font-weight:bold;
-}
-
-/* CONDITIONS */
+/* ===== CONDITIONS ===== */
 .conditions{
-  font-size:9.5px;
-  margin-top:4px;
+  background:#f2f2f2;
+  font-size:9.4pt;
+  padding:3mm;
+  margin-top:3mm;
 }
 
-/* MRZ */
+/* ===== MRZ ===== */
 .mrz{
-  margin-top:4px;
-  font-family:"Courier New", monospace;
-  font-size:10px;
-  letter-spacing:0.8px;
+  font-family:"OCR-B","Courier New",monospace;
+  font-size:10.6pt;
+  letter-spacing:1pt;
+  line-height:1.2;
+  margin-top:3mm;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 .footer{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-top:4px;
-  font-size:10px;
+  margin-top:4mm;
 }
 
 .footer img{
-  height:24px;
+  height:13mm;
+  filter:grayscale(100%);
+}
+
+.footer-date{
+  font-size:9pt;
+}
+
+/* ===== PRINT LOCK ===== */
+@media print{
+  .page{
+    height:273mm;
+    overflow:hidden;
+    page-break-after:avoid;
+  }
 }
 </style>
 </head>
 
 <body>
-<div class="wrapper">
 
-<!-- HEADER -->
-<div class="header">
-  <div class="header-left">
-    <img src="pakvisa-logo.png">
-    <div>
-      <div class="header-title">Pak Visa</div>
-      <div class="header-sub">
-        Islamic Republic of Pakistan<br>
-        Ministry of Interior
-      </div>
-    </div>
+<div class="page">
+
+  <div class="header">
+    <div class="header-left"><img src="logo.jpg"></div>
+    <div class="header-right">VISA GRANT NOTICE</div>
   </div>
-  <div class="header-right">VISA GRANT NOTICE</div>
-</div>
 
-<!-- TOP -->
-<div class="top">
-  <img src="photo.jpg" class="photo">
-  <img src="qr.png" class="qr">
-</div>
+  <div class="top">
+    <div>
+      <div class="photo"><img src="photo.jpg"></div>
+      <div class="name">Ahmad Zai Mohammad Taher</div>
+    </div>
+    <div class="qr" id="qrcode"></div>
+  </div>
 
-<!-- APPLICATION -->
-<div class="section">
-<h3>Application Details</h3>
-<table>
-<tr><td class="label">Date of Visa Application</td><td>2024-12-02</td></tr>
-<tr><td class="label">Visa Reference Number</td><td>88004554637</td></tr>
-</table>
-</div>
+  <div class="section">
+    <h3>Application Details</h3>
+    <div class="row"><b>Date of Visa Application:</b><div>2025-05-11</div></div>
+    <div class="row"><b>Visa Reference Number:</b><div>88004451584</div></div>
+  </div>
 
-<!-- APPLICANT -->
-<div class="section">
-<h3>Applicant's Details</h3>
-<table>
-<tr><td class="label">Applicant Name</td><td>Hussien Khil Nematullah</td></tr>
-<tr><td class="label">Date of Birth</td><td>21 Jun 2000</td></tr>
-<tr><td class="label">Nationality</td><td>Afghan</td></tr>
-<tr><td class="label">Passport Number</td><td>P05653262</td></tr>
-</table>
-</div>
+  <div class="section">
+    <h3>Applicant's Details</h3>
+    <div class="row"><b>Applicant Name</b><div>Ahmad Zai Mohammad Taher</div></div>
+    <div class="row"><b>Date of Birth</b><div>11 Aug 1971</div></div>
+    <div class="row"><b>Nationality</b><div>Afghan</div></div>
+    <div class="row"><b>Passport Number</b><div>P00015454</div></div>
+  </div>
 
-<!-- VISA -->
-<div class="section">
-<h3>Visa Grant Details</h3>
-<table>
-<tr><td class="label">Visa Category</td><td>Tourist/Visit</td></tr>
-<tr><td class="label">Visa Sub Category</td><td>Individual (Less Than 3 Months)</td></tr>
-<tr><td class="label">Application Type</td><td>Entry</td></tr>
-<tr><td class="label">Visa Grant Date</td><td>13 Mar 2025</td></tr>
-<tr><td class="label">Travel Document Country</td><td>Afghanistan</td></tr>
-<tr><td class="label">Stay Facility</td><td>Multiple Entry - Upto 1 Year</td></tr>
-<tr><td class="label">Visa Start Date</td><td>13 Mar 2025</td></tr>
-<tr><td class="label">Visa End Date</td><td>12 Sep 2025</td></tr>
-<tr><td class="label">Visa Duration</td><td>60 Day(s)</td></tr>
-</table>
-</div>
+  <div class="section">
+    <h3>Visa Grant Details</h3>
+    <div class="row"><b>Visa Category</b><div>Tourist / Visit</div></div>
+    <div class="row"><b>Visa Sub Category</b><div>Individual (less Than 3 Months)</div></div>
+    <div class="row"><b>Application Type</b><div>Entry</div></div>
+    <div class="row"><b>Visa Grant Date</b><div>11 Nov 2025</div></div>
+    <div class="row"><b>Travel Document Country</b><div>Afghanistan</div></div>
+    <div class="row"><b>Stay Facility</b><div>Multiple Entry - Upto 1 Year</div></div>
+    <div class="row"><b>Visa Start Date</b><div>11 Nov 2025</div></div>
+    <div class="row"><b>Visa End Date</b><div>11 May 2026</div></div>
+    <div class="row"><b>Visa Duration</b><div>60 Day(s)</div></div>
+  </div>
 
-<!-- CONDITIONS -->
-<div class="conditions">
-<strong>VISA CONDITIONS AND ENTITLEMENTS</strong><br>
-Entry may be made on any date between visa start date & visa end date.<br>
-This visa is granted based upon information and documents provided by the applicant, hence any incorrect or misleading information/documents may lead to:
-<ul style="margin:2px 0 0 14px; padding:0;">
-<li>Visa Cancellation</li>
-<li>Detention</li>
-<li>Removal from Pakistan</li>
-</ul>
-</div>
+  <div class="conditions">
+    Entry may be made on any date between visa start date & visa end date.
+  </div>
 
-<!-- MRZ -->
-<div class="mrz">
-V&lt;PAKHUSSIEN&lt;&lt;KHIL&lt;&lt;NEMATULLAH&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
-88004554637&lt;2AFG0006219M2509127P05653262&lt;&lt;&lt;
-</div>
+  <div class="mrz">
+    V&lt;PAKHUSSIEN&lt;&lt;AHMAD&lt;ZAI&lt;MOHAMMAD&lt;TAHER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
+    88004451584&lt;2AFG0006219M2509127P00015454&lt;&lt;&lt;
+  </div>
 
-<!-- FOOTER -->
-<div class="footer">
-  <img src="pakvisa-logo.png">
-  <div>13 Mar 2025</div>
-</div>
+  <div class="footer">
+    <img src="logo.jpg"><br>
+    <div class="footer-date">07 Nov 2025</div>
+  </div>
 
 </div>
+
+<script>
+new QRCode(document.getElementById("qrcode"),{
+  text:"https://checkpakvisa.github.io/https-visa.nadra.gov.pk-.../",
+  width:110,
+  height:110,
+  correctLevel:QRCode.CorrectLevel.H
+});
+</script>
+
 </body>
 </html>
