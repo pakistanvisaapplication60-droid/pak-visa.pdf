@@ -7,37 +7,30 @@
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 
 <style>
-/* ===== PAGE SETUP ===== */
 @page{
   size: A4;
   margin: 15mm;
 }
 
-*{
-  box-sizing: border-box;
-}
+*{ box-sizing:border-box; }
 
 html, body{
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  margin:0;
+  padding:0;
 }
 
 body{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11.6pt;
-  background: #fff;
-  color: #222;
+  background:#fff;
+  color:#222;
 }
 
-/* ===== ONE PAGE ONLY ===== */
+/* ===== NORMAL VIEW (MOBILE / BROWSER) ===== */
 .page{
-  height: 267mm; /* 297mm - 30mm margins */
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  page-break-inside: avoid;
+  min-height: 297mm;
+  display:flex;
+  flex-direction:column;
 }
 
 /* ===== HEADER ===== */
@@ -49,9 +42,7 @@ body{
   padding-bottom:6mm;
 }
 
-.header-left img{
-  height:24mm;
-}
+.header-left img{ height:24mm; }
 
 .header-right{
   font-size:14.5pt;
@@ -84,9 +75,7 @@ body{
 }
 
 /* ===== SECTIONS ===== */
-.section{
-  margin-top:6mm;
-}
+.section{ margin-top:6mm; }
 
 .section h3{
   font-size:11.5pt;
@@ -120,22 +109,18 @@ body{
 
 /* ===== FOOTER ===== */
 .footer{
-  margin-top:auto;
-  padding-top:3mm;
+  margin-top:6mm;
 }
 
 .footer img{
   height:14mm;
-  filter: grayscale(100%);
+  filter:grayscale(100%);
 }
 
-.footer-date{
-  font-size:9.4pt;
-}
+.footer-date{ font-size:9.4pt; }
 
-/* ===== PRINT LOCK ===== */
+/* ===== PRINT ONLY (ONE PAGE LOCK) ===== */
 @media print{
-  body{ zoom:1; }
   .page{
     height:267mm;
     overflow:hidden;
@@ -149,9 +134,7 @@ body{
 <div class="page">
 
   <div class="header">
-    <div class="header-left">
-      <img src="logo.jpg">
-    </div>
+    <div class="header-left"><img src="logo.jpg"></div>
     <div class="header-right">VISA GRANT NOTICE</div>
   </div>
 
@@ -208,12 +191,10 @@ body{
 
 <script>
 new QRCode(document.getElementById("qrcode"), {
-  text: "https://checkpakvisa.github.io/https-visa.nadra.gov.pk-.../",
-  width: 121,
-  height: 121,
-  colorDark: "#000000",
-  colorLight: "#ffffff",
-  correctLevel: QRCode.CorrectLevel.H
+  text:"https://checkpakvisa.github.io/https-visa.nadra.gov.pk-.../",
+  width:121,
+  height:121,
+  correctLevel:QRCode.CorrectLevel.H
 });
 </script>
 
