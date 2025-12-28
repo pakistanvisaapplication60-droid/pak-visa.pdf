@@ -81,7 +81,6 @@ body{
   margin:0 0 2mm 0;
 }
 
-/* normal rows (with line) */
 .row{
   display:grid;
   grid-template-columns:68mm 1fr;
@@ -90,7 +89,6 @@ body{
   border-bottom:0.4pt solid #e6e6e6;
 }
 
-/* rows WITHOUT line (Application Details like original) */
 .row-noline{
   display:grid;
   grid-template-columns:68mm 1fr;
@@ -129,7 +127,6 @@ body{
   font-size:9pt;
 }
 
-/* ===== PRINT LOCK ===== */
 @media print{
   .page{
     height:273mm;
@@ -157,14 +154,12 @@ body{
     <div class="qr" id="qrcode"></div>
   </div>
 
-  <!-- Application Details (NO LINES like original) -->
   <div class="section">
     <h3>Application Details</h3>
     <div class="row-noline"><b>Date of Visa Application:</b><div>2025-05-11</div></div>
     <div class="row-noline"><b>Visa Reference Number:</b><div>88004451584</div></div>
   </div>
 
-  <!-- Applicant's Details (WITH LINES) -->
   <div class="section">
     <h3>Applicant's Details</h3>
     <div class="row"><b>Applicant Name</b><div>Ahmad Zai Mohammad Taher</div></div>
@@ -173,7 +168,6 @@ body{
     <div class="row"><b>Passport Number</b><div>P00015454</div></div>
   </div>
 
-  <!-- Visa Grant Details (WITH LINES) -->
   <div class="section">
     <h3>Visa Grant Details</h3>
     <div class="row"><b>Visa Category</b><div>Tourist / Visit</div></div>
@@ -187,8 +181,17 @@ body{
     <div class="row"><b>Visa Duration</b><div>60 Day(s)</div></div>
   </div>
 
+  <!-- ✅ ONLY FIXED PART -->
   <div class="conditions">
-    Entry may be made on any date between visa start date & visa end date.
+    <b>VISA CONDITIONS AND ENTITLEMENTS</b><br><br>
+
+    Entry may be made on any date between visa start date &amp; visa end date.<br><br>
+
+    This visa is granted based upon information and documents provided by the applicant, hence, any incorrect or misleading information/documents provided may lead to legal consequences including (but not limit to):<br><br>
+
+    • Visa Cancellation<br>
+    • Detention<br>
+    • Removal from Pakistan
   </div>
 
   <div class="mrz">
