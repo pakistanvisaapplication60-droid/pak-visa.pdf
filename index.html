@@ -17,7 +17,7 @@
 <style>
 @page{
   size: A4;
-  margin: 15mm;
+  margin: 10mm; /* ✅ قفل نهایی */
 }
 html, body{
   width: 210mm;
@@ -26,18 +26,11 @@ html, body{
   padding: 0;
 }
 body{
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11.5px; /* ✅ قفل نهایی */
   background:#fff;
   color:#222;
 }
-
-/* ✅ فقط این اضافه شده */
-.page{
-  width:100%;
-  height:100%;
-  box-sizing:border-box;
-}
-
 .header{
   display:flex;
   justify-content:space-between;
@@ -113,7 +106,6 @@ body{
 </head>
 
 <body>
-<div class="page">
 
 <div class="header">
   <div class="header-left">
@@ -169,8 +161,6 @@ V&lt;PAKHUSSIEN&lt;&lt;AHMAD&lt;ZAI&lt;MOHAMMAD&lt;TAHER&lt;&lt;&lt;&lt;&lt;&lt;
 <div class="footer">
   <img src="logo.jpg"><br>
   <div class="footer-date">07 Nov 2025</div>
-</div>
-
 </div>
 
 <script>
