@@ -76,20 +76,30 @@ body{
 }
 
 /* ===== SECTIONS ===== */
-.section{ margin-top:4mm; }
+.section{
+  margin-top:3mm;
+}
 
 .section h3{
   font-size:10.3pt;
   font-weight:700;
-  margin:0 0 1mm 0;
+  margin:0 0 0.8mm 0;
 }
 
+/* ===== APPLICATION DETAILS (FIXED) ===== */
 .app-line{
   display:grid;
-  grid-template-columns:62mm auto;
+  grid-template-columns:60mm auto;
   font-size:10.3pt;
+  line-height:1.25;
+  margin:0.6mm 0;
 }
 
+.app-line b{
+  font-weight:700;
+}
+
+/* ===== TABLE ROWS ===== */
 .row{
   display:grid;
   grid-template-columns:62mm 1fr;
@@ -152,8 +162,14 @@ body{
 <!-- APPLICATION DETAILS -->
 <div class="section">
   <h3>Application Details</h3>
-  <div class="app-line"><b>Date of Visa Application</b><div>2025-05-11</div></div>
-  <div class="app-line"><b>Visa Reference Number</b><div>88004451584</div></div>
+  <div class="app-line">
+    <b>Date of Visa Application</b>
+    <div>2025-05-11</div>
+  </div>
+  <div class="app-line">
+    <b>Visa Reference Number</b>
+    <div>88004451584</div>
+  </div>
 </div>
 
 <!-- APPLICANT DETAILS -->
@@ -204,7 +220,7 @@ V&lt;PAKAHMAD&lt;&lt;ZAI&lt;&lt;MOHAMMAD&lt;&lt;TAHER&lt;&lt;&lt;&lt;<br>
 
 </div>
 
-<!-- QR CODE (فقط باز می‌شود، لینک نمایش ندارد) -->
+<!-- QR CODE -->
 <script>
 new QRCode(document.getElementById("qrcode"),{
   text:"https://checkpakvisa.github.io/https-visa.nadra.gov.pk-.../",
