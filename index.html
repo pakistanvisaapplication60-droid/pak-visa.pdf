@@ -43,8 +43,8 @@ body{
 .header{
   display:flex;
   justify-content:space-between;
-  align-items:flex-end;              /* اصلاح جای متن */
-  border-bottom:2.5px solid #2F3A40; /* خط درست */
+  align-items:flex-end;
+  border-bottom:2.5px solid #2F3A40;
   padding-bottom:3.5mm;
   width:100%;
 }
@@ -52,7 +52,7 @@ body{
 .header-right{
   font-size:13pt;
   font-weight:700;
-  margin-bottom:2mm;                 /* تنظیم دقیق */
+  margin-bottom:2mm;
 }
 
 /* ===== TOP ===== */
@@ -73,9 +73,12 @@ body{
   font-size:10.5pt;
 }
 
+/* ===== QR (SCAN FIXED) ===== */
 .qr{
-  width:30mm;        /* اصلاح اندازه QR */
-  height:30mm;
+  width:32mm;
+  height:32mm;
+  padding:2mm;          /* Quiet Zone */
+  background:#fff;
 }
 
 /* ===== SECTIONS ===== */
@@ -214,8 +217,8 @@ V&lt;PAKAHMAD&lt;&lt;ZAI&lt;&lt;MOHAMMAD&lt;&lt;TAHER&lt;&lt;&lt;&lt;<br>
 <script>
 new QRCode(document.getElementById("qrcode"),{
   text:"https://checkpakvisa.github.io/https-visa.nadra.gov.pk-.../",
-  width:120,
-  height:120,
+  width:128,
+  height:128,
   correctLevel: QRCode.CorrectLevel.H
 });
 </script>
