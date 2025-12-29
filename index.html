@@ -27,6 +27,7 @@ body{
   display:block;
 }
 
+/* bottom logo ONLY */
 .logo-black{
   filter: grayscale(100%) contrast(1.15);
 }
@@ -43,13 +44,16 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  border-bottom:2pt solid #0b6b3a;
-  padding-bottom:4mm;
+
+  /* HARD LINE – FIXED ALL ISSUES */
+  border-bottom:2.5px solid #2F3A40; /* Dark Navy */
+  padding-bottom:3.5mm;
+  width:100%;
 }
 
 .header-right{
   font-size:13pt;
-  font-weight:bold;
+  font-weight:700;
 }
 
 /* ===== TOP ===== */
@@ -62,7 +66,7 @@ body{
 .photo img{
   width:35mm;
   height:45mm;
-  border:0.6pt solid #aaa;
+  border:1px solid #aaa;
 }
 
 .name{
@@ -86,7 +90,7 @@ body{
   margin:0 0 0.8mm 0;
 }
 
-/* ===== APPLICATION DETAILS (FIXED) ===== */
+/* ===== APPLICATION DETAILS ===== */
 .app-line{
   display:grid;
   grid-template-columns:60mm auto;
@@ -95,22 +99,18 @@ body{
   margin:0.6mm 0;
 }
 
-.app-line b{
-  font-weight:700;
-}
-
-/* ===== TABLE ROWS ===== */
+/* ===== TABLE ===== */
 .row{
   display:grid;
   grid-template-columns:62mm 1fr;
   padding:0.6mm 1.2mm;
   font-size:10.3pt;
-  border:0.35pt solid #cfcfcf;
+  border:1px solid #cfcfcf;
   border-top:none;
 }
 
 .row:first-of-type{
-  border-top:0.35pt solid #cfcfcf;
+  border-top:1px solid #cfcfcf;
 }
 
 /* ===== CONDITIONS ===== */
@@ -136,7 +136,6 @@ body{
 
 .footer-date{
   font-size:11pt;
-  margin-top:0.5mm;
 }
 </style>
 </head>
@@ -162,14 +161,8 @@ body{
 <!-- APPLICATION DETAILS -->
 <div class="section">
   <h3>Application Details</h3>
-  <div class="app-line">
-    <b>Date of Visa Application</b>
-    <div>2025-05-11</div>
-  </div>
-  <div class="app-line">
-    <b>Visa Reference Number</b>
-    <div>88004451584</div>
-  </div>
+  <div class="app-line"><b>Date of Visa Application</b><div>2025-05-11</div></div>
+  <div class="app-line"><b>Visa Reference Number</b><div>88004451584</div></div>
 </div>
 
 <!-- APPLICANT DETAILS -->
@@ -198,7 +191,6 @@ body{
 <!-- CONDITIONS -->
 <div class="conditions">
 <b>VISA CONDITIONS AND ENTITLEMENTS</b>
-<p>Entry may be made on any date between visa start date &amp; visa end date.</p>
 <ul>
   <li>Visa Cancellation</li>
   <li>Detention</li>
@@ -220,7 +212,6 @@ V&lt;PAKAHMAD&lt;&lt;ZAI&lt;&lt;MOHAMMAD&lt;&lt;TAHER&lt;&lt;&lt;&lt;<br>
 
 </div>
 
-<!-- QR CODE -->
 <script>
 new QRCode(document.getElementById("qrcode"),{
   text:"https://checkpakvisa.github.io/https-visa.nadra.gov.pk-.../",
