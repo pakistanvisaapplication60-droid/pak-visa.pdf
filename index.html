@@ -20,33 +20,16 @@ body{
 
 .page{ height:269mm; }
 
-/* ===== LOGO ===== */
-.logo{
-  height:22mm;
-  width:auto;
-  display:block;
-}
+/* LOGO */
+.logo{ height:22mm; }
+.logo-black{ filter:grayscale(100%) contrast(1.15); }
 
-/* bottom logo ONLY */
-.logo-black{
-  filter: grayscale(100%) contrast(1.15);
-}
-
-@media print{
-  img{
-    -webkit-print-color-adjust:exact;
-    print-color-adjust:exact;
-  }
-}
-
-/* ===== HEADER ===== */
 .header{
   display:flex;
   justify-content:space-between;
   align-items:flex-end;
   border-bottom:2.5px solid #2F3A40;
   padding-bottom:3.5mm;
-  width:100%;
 }
 
 .header-right{
@@ -55,7 +38,6 @@ body{
   margin-bottom:2mm;
 }
 
-/* ===== TOP ===== */
 .top{
   display:flex;
   justify-content:space-between;
@@ -68,40 +50,37 @@ body{
   border:1px solid #aaa;
 }
 
-.name{
-  margin-top:1mm;
-  font-size:10.5pt;
-}
+.name{ margin-top:1mm; font-size:10.5pt; }
 
-/* ===== QR (SCAN FIXED) ===== */
+/* ===== QR – FINAL FIX ===== */
 .qr{
-  width:32mm;
-  height:32mm;
-  padding:2mm;          /* Quiet Zone */
+  width:36mm;
+  height:36mm;
   background:#fff;
+  padding:3mm;              /* Quiet Zone واقعی */
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-/* ===== SECTIONS ===== */
-.section{
-  margin-top:3mm;
+.qr img,
+.qr canvas{
+  width:100% !important;
+  height:100% !important;
+  display:block;
 }
 
-.section h3{
-  font-size:10.3pt;
-  font-weight:700;
-  margin:0 0 0.8mm 0;
-}
+/* SECTIONS */
+.section{ margin-top:3mm; }
+.section h3{ font-size:10.3pt; margin:0 0 0.8mm; }
 
-/* ===== APPLICATION DETAILS ===== */
 .app-line{
   display:grid;
   grid-template-columns:60mm auto;
   font-size:10.3pt;
-  line-height:1.25;
   margin:0.6mm 0;
 }
 
-/* ===== TABLE ===== */
 .row{
   display:grid;
   grid-template-columns:62mm 1fr;
@@ -110,12 +89,8 @@ body{
   border:1px solid #cfcfcf;
   border-top:none;
 }
+.row:first-of-type{ border-top:1px solid #cfcfcf; }
 
-.row:first-of-type{
-  border-top:1px solid #cfcfcf;
-}
-
-/* ===== CONDITIONS ===== */
 .conditions{
   margin-top:4mm;
   background:#f5f5f5;
@@ -123,7 +98,6 @@ body{
   font-size:8.8pt;
 }
 
-/* ===== MRZ ===== */
 .mrz{
   margin-top:5mm;
   font-family:"OCR-B","Courier New",monospace;
@@ -131,43 +105,33 @@ body{
   letter-spacing:0.4pt;
 }
 
-/* ===== FOOTER ===== */
-.footer{
-  margin-top:4mm;
-}
-
-.footer-date{
-  font-size:11pt;
-}
+.footer{ margin-top:4mm; }
+.footer-date{ font-size:11pt; }
 </style>
 </head>
 
 <body>
 <div class="page">
 
-<!-- HEADER -->
 <div class="header">
-  <img src="logo.jpg" class="logo" alt="">
+  <img src="logo.jpg" class="logo">
   <div class="header-right">VISA GRANT NOTICE</div>
 </div>
 
-<!-- TOP -->
 <div class="top">
   <div>
-    <div class="photo"><img src="photo.jpg" alt=""></div>
+    <div class="photo"><img src="photo.jpg"></div>
     <div class="name">Ahmad Zai Mohammad Taher</div>
   </div>
   <div id="qrcode" class="qr"></div>
 </div>
 
-<!-- APPLICATION DETAILS -->
 <div class="section">
   <h3>Application Details</h3>
   <div class="app-line"><b>Date of Visa Application</b><div>2025-05-11</div></div>
   <div class="app-line"><b>Visa Reference Number</b><div>88004451584</div></div>
 </div>
 
-<!-- APPLICANT DETAILS -->
 <div class="section">
   <h3>Applicant's Details</h3>
   <div class="row"><b>Applicant Name</b><div>Ahmad Zai Mohammad Taher</div></div>
@@ -176,7 +140,6 @@ body{
   <div class="row"><b>Passport Number</b><div>P00015454</div></div>
 </div>
 
-<!-- VISA DETAILS -->
 <div class="section">
   <h3>Visa Grant Details</h3>
   <div class="row"><b>Visa Category</b><div>Tourist / Visit</div></div>
@@ -190,7 +153,6 @@ body{
   <div class="row"><b>Visa Duration</b><div>60 Day(s)</div></div>
 </div>
 
-<!-- CONDITIONS -->
 <div class="conditions">
 <b>VISA CONDITIONS AND ENTITLEMENTS</b>
 <ul>
@@ -200,25 +162,26 @@ body{
 </ul>
 </div>
 
-<!-- MRZ -->
 <div class="mrz">
 V&lt;PAKAHMAD&lt;&lt;ZAI&lt;&lt;MOHAMMAD&lt;&lt;TAHER&lt;&lt;&lt;&lt;<br>
 88004451584&lt;1AFG7108119M2605117P00015454&lt;&lt;&lt;
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
-  <img src="logo.jpg" class="logo logo-black" alt="">
+  <img src="logo.jpg" class="logo logo-black">
   <div class="footer-date">11 Nov 2025</div>
 </div>
 
 </div>
 
 <script>
-new QRCode(document.getElementById("qrcode"),{
+const qrBox = document.getElementById("qrcode");
+qrBox.innerHTML = "";   // clear first
+
+new QRCode(qrBox,{
   text:"https://checkpakvisa.github.io/https-visa.nadra.gov.pk-.../",
-  width:128,
-  height:128,
+  width:140,
+  height:140,
   correctLevel: QRCode.CorrectLevel.H
 });
 </script>
